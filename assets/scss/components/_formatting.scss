@@ -1,0 +1,180 @@
+// .formatting {
+//   max-width: 1023px;
+//   margin: auto;
+//   white-space: pre-wrap;
+//   // font-weight: 300;
+//   // color: $secondary-blue;
+//   position: relative;
+//   line-height: 1.5;
+
+//   &::after {
+//     content: "";
+//     display: table;
+//     clear: both;
+//   }
+
+//   @include desktop(tab_port) {
+//     font-size: 14px;
+//   }
+
+//   ul,
+//   ol,
+//   figure,
+//   picture,
+//   .table-container {
+//     white-space: normal;
+//   }
+
+//   // HEADING
+//   h1 {
+//     font-size: 45px;
+//     margin-top: 40px;
+
+//     @include desktop(tab_port) {
+//       font-size: 35px;
+//       margin-top: 35px;
+//     }
+//   }
+//   h2 {
+//     font-size: 35px;
+//     margin-top: 35px;
+
+//     @include desktop(tab_port) {
+//       font-size: 28px;
+//       margin-top: 30px;
+//     }
+//   }
+//   h3 {
+//     font-size: 28px;
+//     margin-top: 30px;
+
+//     @include desktop(tab_port) {
+//       font-size: 24px;
+//       margin-top: 25px;
+//     }
+//   }
+//   h4 {
+//     font-size: 24px;
+//     margin-top: 25px;
+
+//     @include desktop(tab_port) {
+//       font-size: 20px;
+//       margin-top: 20px;
+//     }
+//   }
+//   h5 {
+//     font-size: 20px;
+//     margin-top: 20px;
+
+//     @include desktop(tab_port) {
+//       font-size: 17px;
+//       margin-top: 15px;
+//     }
+//   }
+//   h6 {
+//     font-size: 17px;
+//     margin-top: 15px;
+
+//     @include desktop(tab_port) {
+//       font-size: 15px;
+//       margin-top: 12px;
+//     }
+//   }
+//   :is(h1, h2, h3, h4, h5, h6) {
+//     margin-bottom: -25px !important;
+//     line-height: 1.8;
+//   }
+//   :is(h1, h2, h3, h4, h5, h5):first-child,
+//   hr + :is(h1, h2, h3, h4, h5, h6) {
+//     margin-top: 0px !important;
+//   }
+
+//   // IMAGE
+//   :is(img, figure, :not(figure) picture):is(.alignnone, .aligncenter) {
+//     display: block;
+//     margin: 30px auto;
+//     width: fit-content;
+//     width: -moz-fit-content;
+//   }
+//   figure {
+//     img {
+//       margin: 0px !important;
+//     }
+//     picture {
+//       display: block;
+//     }
+//     figcaption {
+//       font-size: 12px;
+//       padding: 3px 15px;
+//       text-align: center;
+//       background: #eee;
+//     }
+//   }
+//   :is(figure,picture) img {
+//     display: block;
+//   }
+//   :is(img, figure, :not(figure) picture) {
+//     &.alignright {
+//       float: right;
+//       margin: 15px 0px 15px 20px;
+//     }
+//     &.alignleft {
+//       float: left;
+//       margin: 15px 20px 15px 0px;
+//     }
+//   }
+//   // SEPARATOR
+//   hr {
+//     margin: 0px 0px -25.5px;
+//   }
+//   p + hr {
+//     margin-top: -44px !important;
+//   }
+
+//   // TABLE
+//   .table-container {
+//     overflow: auto;
+
+//     &::-webkit-scrollbar {
+//       width: 2px;
+//       height: 2px;
+
+//       &-track {
+//         background: #f1f1f1;
+//       }
+//       &-thumb {
+//         background: #888;
+//       }
+//     }
+//     table {
+//       border-collapse: collapse;
+//     }
+//     :is(th, td) {
+//       text-align: start;
+//       border: 1px solid #d4d4d4;
+//       padding: 10px;
+//     }
+//   }
+
+//   // LIST
+//   :is(ul,ol) {
+//     padding-left: 20px;
+//   }
+
+//   // TEXT
+//   b,
+//   strong {
+//     font-weight: 700;
+//   }
+//   blockquote {
+//     background: #eee;
+//     padding: 5px 5px 5px 30px;
+//     margin: 10px 0px;
+//     position: relative;
+
+//     &::after {
+//       @include absolute(0, 0, unset, unset, 3px, 100%, true);
+//       // background: $primary-blue;
+//     }
+//   }
+// }

@@ -1,0 +1,142 @@
+/*!
+Theme Name: live-enviroment
+Theme URI: https://live-enviroment.com
+Author: Usman Khan
+Author URI: https://iusmankhanpk.com
+Description: Just for testing purpose
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: live-enviroment
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+:root {
+  $font-sizes: (20, 25, 30, 38); //Enter all the font sizes here to create the font size variables
+  $font-weights: (300, 500, 700, 900); // enter all the font weights to create font weight variables
+  $colors: (white, #fff), (black, #000), (red, #777); // enter the name for the variable in first position and color value in second.
+  $media-991: (20, 16), (30, 28), (45, 30); //responsive fontsizes variables
+
+  @each $size in $font-sizes {
+    --fs-#{$size}: #{$size}px;
+  }
+
+  @each $weight in $font-weights {
+    @if $weight == 300 {
+      --fw-light: #{$weight};
+    }
+
+    @if $weight == 400 {
+      --fw-regular: #{$weight};
+    }
+
+    @if $weight == 500 {
+      --fw-medium: #{$weight};
+    }
+
+    @if $weight == 600 {
+      --fw-semi-bold: #{$weight};
+    }
+
+    @if $weight == 700 {
+      --fw-bold: #{$weight};
+    }
+
+    @if $weight == 900 {
+      --fw-black: #{$weight};
+    }
+  }
+
+  @each $color in $colors {
+    --color-#{nth($color,1)}: #{nth($color, 2)};
+  }
+
+  @media only screen and (max-width: 991px) {
+    @each $media in $media-991 {
+      --fs-#{nth($media,1)}: #{nth($media, 2)}px;
+    }
+  }
+}
+
+// This Loop creats classes named .--fs-(size) which contain font sizes that have been entered in the array $font-sizes
+$font-sizes: (20, 25, 30, 38);
+
+@each $size in $font-sizes {
+  .--fs-#{$size} {
+    font-size: var(--fs-#{$size});
+  }
+}
+
+// This Loop creats classes named .--fw-(weight) which contain font weights that have been entered in the array $font-weights
+$font-weights: (400, 500, 600, 700);
+
+@each $weight in $font-weights {
+  @if $weight == 300 {
+    .--fw-light {
+      font-weight: var(--fw-light);
+    }
+  }
+
+  @if $weight == 400 {
+    .--fw-regular {
+      font-weight: var(--fw-regular);
+    }
+  }
+
+  @if $weight == 500 {
+    .--fw-medium {
+      font-weight: var(--fw-medium);
+    }
+  }
+
+  @if $weight == 600 {
+    .--fw-semi-bold {
+      font-weight: var(--fw-semi-bold);
+    }
+  }
+
+  @if $weight == 700 {
+    .--fw-bold {
+      font-weight: var(--fw-bold);
+    }
+  }
+
+  @if $weight == 900 {
+    .--fw-black {
+      font-weight: var(--fw-black);
+    }
+  }
+}
+
+// This loop creates classes named .mb-1 to .mb-40 containing margin bottom property
+@for $i from 1 through 40 {
+  .mb-#{$i} {
+    margin-bottom: ($i) * 1px;
+  }
+}
+
+$text-transform: (capitalize, uppercase, lowercase);
+
+@each $transform in $text-transform {
+  .#{$transform} {
+    text-transform: $transform;
+  }
+}
+
+$text-align: (left, right, center);
+
+@each $align in $text-align {
+  .text-#{$align} {
+    text-align: $align;
+  }
+}
+
+$colors: (white, black, red);
+
+.--color {
+  @each $color in $colors {
+    &-#{$color} {
+      color: var(--color-#{$color});
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.jQuery {
+  font-family: "Roboto", sans-serif;
+
+  .container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 15px;
+
+    h1 {
+      width: fit-content;
+      margin: 0 auto 30px;
+      font-size: 45px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #7777;
+    }
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      width: fit-content;
+      padding: 30px 0px 10px;
+      border-bottom: 2px solid #7777;
+    }
+    h3 {
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+    b {
+      font-weight: 700;
+    }
+    div {
+      padding-left: 15px;
+      font-size: 17px;
+      line-height: 1.5em;
+    }
+    ul {
+      padding: 10px 0px 0px 25px;
+    }
+  }
+}
